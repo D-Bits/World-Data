@@ -52,7 +52,7 @@ def load_nations():
             )
 
 
-def load_financial():
+def load_economic():
 
 
     # Seed the users table w/ sample data from csv file
@@ -71,7 +71,7 @@ def main():
     db_connection()
     # load_continents()
     # load_nations()
-    load_financial()
+    load_economic()
 
 
 main()
