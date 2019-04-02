@@ -1,13 +1,13 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, TemplateView
 from . models import Demographic, Economic, Continents
 
 
 # Home page view
-def index():
-    
+class Index(TemplateView):
+
+    title = 'Home'
     template_name = 'nations/index.html'
-    return render(template_name)
 
 
 # Continents views
@@ -30,7 +30,7 @@ class DemographicsView(ListView):
 
 
 # Economics data for all countries
-class EconomicsViews(ListView):
+class EconomicsView(ListView):
 
     model = Economic
     template_name = 'nations/economics.html'

@@ -10,7 +10,7 @@ Change into the "data" directory, and run the etl.py file to seed the database. 
 
 ## Technologies used
 
-* Django 2.1.7
+* Django 2.2
 
 * Psycopg2 2.7.7
 
