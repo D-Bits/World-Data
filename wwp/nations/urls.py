@@ -9,7 +9,7 @@ from . views import (
 )
 
 urlpatterns = [
-    path('', views.Index, name="index"),
+    path('', Index.as_view(), name="index"),
     path('continents/', ContinentsView.as_view(), name="continents"),
     path('demographics/', DemographicsView.as_view(), name="demo"),
     path('economics/', EconomicsView.as_view(), name="econ"),

@@ -42,7 +42,7 @@ class EconomicsView(ListView):
 # View for info on an individual nation 
 class NationDetailView(DetailView):
 
-    model = Economic, Demographic
+    model = Economic
     template = 'nations/nation_detail.html'
     
     # Select data from all fields from Demographic and Economic models
