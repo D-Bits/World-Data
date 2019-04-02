@@ -7,7 +7,7 @@ from . models import Demographic, Economic, Continents
 def index():
     
     template_name = 'nations/index.html'
-    return render(request, template_name)
+    return render(template_name)
 
 
 # Continents views
@@ -23,7 +23,7 @@ class ContinentsView(ListView):
 class DemographicsView(ListView):
 
     model = Demographic
-    template_name = 'nations/demo.html'
+    template_name = 'nations/demographics.html'
     context_object_name = 'nations'
     ordering = ['-name']
 
