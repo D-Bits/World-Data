@@ -1,11 +1,12 @@
 # World Wealth and Poverty
 
+## About 
+
 A project to show economic and demographic data of countries around the world. Work in progress.
 
 ## Seeding the Database 
 
-Change into the "data" directory, and run the etl.py file to seed the database. Be sure to run "pipenv install"
-first to ensure that SQLAlchemy is installed. 
+Change into the "data" directory, and run the etl.py file to seed the database. Be sure to run "pipenv install" first to ensure that SQLAlchemy is installed. 
 
 ## Technologies used
 

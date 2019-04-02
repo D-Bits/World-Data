@@ -19,7 +19,7 @@ class ContinentsView(ListView):
     ordering = ['-name']
 
 
-# Demographics views
+# Demographics data for all countries
 class DemographicsView(ListView):
 
     model = Demographic
@@ -29,7 +29,7 @@ class DemographicsView(ListView):
     title = 'Demographic Data'
 
 
-# Economics view
+# Economics data for all countries
 class EconomicsViews(ListView):
 
     model = Economic
@@ -38,8 +38,16 @@ class EconomicsViews(ListView):
     ordering = ['-name']
     title = 'Economic Data'
 
+
+# View for info on an individual nation 
 class NationDetailView(DetailView):
 
     model = Economic, Demographic
     template = 'nations/nation_detail.html'
     
+    # Select data from all fields from Demographic and Economic models
+    def queryset():
+        
+        Economic.objects.all().select_related('name')
+    
+
