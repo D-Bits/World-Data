@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from . models import Demographic, Economic, Continents
 
 
@@ -26,6 +26,7 @@ class DemographicsView(ListView):
     template_name = 'nations/demographics.html'
     context_object_name = 'nations'
     ordering = ['-name']
+    title = 'Demographic Data'
 
 
 # Economics view
@@ -35,3 +36,10 @@ class EconomicsViews(ListView):
     template_name = 'nations/economics.html'
     context_object_name = 'nations'
     ordering = ['-name']
+    title = 'Economic Data'
+
+class NationDetailView(DetailView):
+
+    model = Economic, Demographic
+    template = 'nations/nation_detail.html'
+    

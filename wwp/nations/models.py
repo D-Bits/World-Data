@@ -8,7 +8,7 @@ class Continents(models.Model):
     countries = models.IntegerField() #  Number of countries in continent
 
 # Model for demographic data
-class Nations(models.Model):
+class Demographic(models.Model):
 
     name = models.CharField(max_length=150)
     region = models.CharField(max_length=150)
