@@ -16,7 +16,8 @@ class ContinentsView(ListView):
     model = Continents
     template_name = 'nations/continents.html'
     context_object_name = 'continents'
-    ordering = ['-name']
+    ordering = ['name']
+    title = 'Continents Data'
 
 
 # Demographics data for all countries
@@ -24,8 +25,8 @@ class DemographicsView(ListView):
 
     model = Demographic
     template_name = 'nations/demographics.html'
-    context_object_name = 'nations'
-    ordering = ['-name']
+    context_object_name = 'demographics'
+    ordering = ['name']
     title = 'Demographic Data'
 
 

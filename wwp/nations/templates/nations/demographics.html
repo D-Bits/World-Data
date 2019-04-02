@@ -1,0 +1,21 @@
+{% extends "nations/layout.html" %}
+
+{% block content %}
+
+<div class="col-sm-8 text-left"> 
+
+    <p>The nations of the world, with their
+        relevant demographic data.
+    </p>
+
+    <br>
+
+    {% for demographic in demographics %}
+        <h3>{{ demographic.name }}</h3>
+        <p><strong>Population: </strong>{{ demographic.region }}</p>
+        <p><strong>Countries: </strong>{{ demographic.gov_type }}</p>
+        <p><strong>Countries: </strong>{{ demographic.total_population }}</p>
+    {% endfor %}
+</div>
+
+{% endblock content %}

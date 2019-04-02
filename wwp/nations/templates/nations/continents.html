@@ -1,0 +1,21 @@
+{% extends "nations/layout.html" %}
+
+{% block content %}
+
+<div class="col-sm-8 text-left"> 
+
+    <p>The continents/regions of the world, along with
+        their populations, and the number of countries 
+        that they have.
+    </p>
+
+    <br>
+
+    {% for continent in continents %}
+        <h3>{{ continent.name }}</h3>
+        <p><strong>Population: </strong>{{ continent.total_population }}</p>
+        <p><strong>Countries: </strong>{{ continent.countries }}</p>
+    {% endfor %}
+</div>
+
+{% endblock content %}
