@@ -8,6 +8,11 @@ A project to show economic and demographic data of countries around the world. W
 
 Change into the "data" directory, and run the etl.py file to seed the database. Be sure to run "pipenv install" first to ensure that SQLAlchemy is installed. 
 
+## Future Goals
+
+* Add population density to demographics
+* Add drop down menu in demographics and economics templates
+
 ## Technologies used
 
 * Django 2.2
