@@ -69,8 +69,8 @@ def load_economic():
 def main():
 
     db_connection()
-    # load_continents()
-    # load_nations()
+    load_continents()
+    load_nations()
     load_economic()
 
 
