@@ -3,7 +3,24 @@
 {% block content %}
 
 <div class="col-sm-8 text-left"> 
-   
+
+    <p>The nations of the world, with their
+        relevant economic data.
+    </p>
+
+    <br>
+
+    {% for demographic in demographics %}
+        <h3>{{ economic.name }}</h3>
+        <br>
+        <p><strong>GDP: </strong>{{ economic.gdp }}</p>
+        <p><strong>GDP per Capita: </strong>{{ economic.gdp_per_capita }}</p>
+        <p><strong>Gini: </strong>{{ economic.total_population }}</p>
+        <p><strong>Unemployment: </strong>{{ economic.unemployment }}</p>
+        <p><strong>Poverty Rate: </strong>{{ economic.poverty_rate }}</p>
+        <br>
+    {% endfor %}
+    
 </div>
 
 {% endblock content %}

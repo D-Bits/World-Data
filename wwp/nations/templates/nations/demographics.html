@@ -12,9 +12,11 @@
 
     {% for demographic in demographics %}
         <h3>{{ demographic.name }}</h3>
-        <p><strong>Population: </strong>{{ demographic.region }}</p>
-        <p><strong>Countries: </strong>{{ demographic.gov_type }}</p>
-        <p><strong>Countries: </strong>{{ demographic.total_population }}</p>
+        <br>
+        <p><strong>Continent/Region: </strong>{{ demographic.region }}</p>
+        <p><strong>Government Type: </strong>{{ demographic.gov_type }}</p>
+        <p><strong>Population: </strong>{{ demographic.total_population }}</p>
+        <br>
     {% endfor %}
     
 </div>

@@ -26,9 +26,11 @@ class DemographicsView(ListView):
     model = Demographic
     template_name = 'nations/demographics.html'
     context_object_name = 'demographics'
+    #queryset = Demographic.objects.all()
     ordering = ['name']
     title = 'Demographic Data'
 
+    # Define the queryset
 
 # Economics data for all countries
 class EconomicsView(ListView):

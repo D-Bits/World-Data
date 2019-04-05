@@ -8,14 +8,21 @@ class Continents(models.Model):
     total_population = models.CharField(max_length=150)
     countries = models.IntegerField() #  Number of countries in continent
 
+    def __str__(self):
+
+        return self.name
 
 # Model for demographic data
 class Demographic(models.Model):
 
-    name = models.ForeignKey(Continents, on_delete=models.CASCADE)
+    name = models.CharField(max_length=150)
     region = models.CharField(max_length=150)
     gov_type = models.CharField(max_length=150) #  Government type
     total_population = models.IntegerField()
+
+    def __str__(self):
+
+        return self.name
 
 
 # Model for economic data    
@@ -27,3 +34,7 @@ class Economic(models.Model):
     gini = models.DecimalField(max_digits=4, decimal_places=2)
     unemployment = models.DecimalField(max_digits=4, decimal_places=2)
     poverty_rate = models.DecimalField(max_digits=4, decimal_places=2)
+
+    def __str__(self):
+
+        return self.name
